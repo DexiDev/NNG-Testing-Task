@@ -12,14 +12,16 @@ namespace DefaultNamespace
     {
         [OdinSerialize] private List<IItemsContainer> _itemsContainers = new();
         
+        public List<Item> Items { get; } = new();
+
         public void AddItem(Item item)
         {
-            // _items.Add(item);
+            Items.Add(item);
         }
 
         public void RemoveItem(Item item)
         {
-            // _items.Remove(item);
+            Items.Remove(item);
         }
         
         public Transform GetTransform()
@@ -27,7 +29,7 @@ namespace DefaultNamespace
             return transform;
         }
 
-        public Vector3 GetPosition()
+        public Vector3 GetPosition(Item item)
         {
             return transform.position;
         }

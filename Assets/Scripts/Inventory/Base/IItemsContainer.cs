@@ -6,13 +6,14 @@ namespace Game.Inventory
 {
     public interface IItemsContainer
     {
+        List<Item> Items { get; } 
         public void AddItem(Item item);
 
         public void RemoveItem(Item item);
         
         Transform GetTransform();
         
-        Vector3 GetPosition();
+        Vector3 GetPosition(Item item);
 
         UniTask MoveItem(Item item);
         

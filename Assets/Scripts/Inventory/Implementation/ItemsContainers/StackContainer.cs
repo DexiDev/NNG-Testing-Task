@@ -12,16 +12,16 @@ namespace DefaultNamespace
         [SerializeField] private Vector2Int _size;
         [SerializeField] private Vector3 _offset;
 
-        private List<Item> _items = new();
+        public List<Item> Items { get; } = new();
 
         public void AddItem(Item item)
         {
-            _items.Add(item);
+            Items.Add(item);
         }
 
         public void RemoveItem(Item item)
         {
-            _items.Remove(item);
+            Items.Remove(item);
         }
 
         public Transform GetTransform()
@@ -29,27 +29,23 @@ namespace DefaultNamespace
             return transform;
         }
 
-        public Vector3 GetPosition()
+        public Vector3 GetPosition(Item item)
         {
-            var itemsCount = _items.Count - 1;
+            var itemsCount = Items.IndexOf(item);
 
             int zPoint = (int)Math.Truncate((float)itemsCount / _size.x);
             int xPoint = itemsCount - zPoint * _size.x;
 
-            //Y Offset
             int yPoint = (int)Math.Truncate((float)zPoint / _size.y);
             zPoint -= yPoint * _size.y;
 
-            float x = xPoint * _offset.x;
-            float y = yPoint * _offset.y;
-            float z = zPoint * _offset.z;
+            var offset = new Vector3(xPoint * _offset.x, yPoint * _offset.y, zPoint * _offset.z);
 
-            return new Vector3(x, y, z) + transform.position;
+            return offset + transform.position;
         }
 
         public async UniTask MoveItem(Item item)
         {
-            _items.Add(item);
             await item.Move(this);
         }
     }

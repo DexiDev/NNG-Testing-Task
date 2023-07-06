@@ -60,13 +60,17 @@ namespace Game.Inventory
                 _itemsContainer.AddItem(this);
                 
                 _isActive = true;
+
+
+                var targetPosition = itemsContainer.GetPosition(this);
                 
-                while (transform.position != itemsContainer.GetPosition() &&
-                       !_cancellationTokenSource.IsCancellationRequested)
+                while (transform.position != targetPosition && !_cancellationTokenSource.IsCancellationRequested)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, itemsContainer.GetPosition(),
-                        _speed * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, itemsContainer.GetPosition(this), _speed * Time.deltaTime);
+                    
                     await UniTask.Yield(_cancellationTokenSource.Token);
+                    
+                    targetPosition = itemsContainer.GetPosition(this);
                 }
                 
                 transform.SetParent(itemsContainer.GetTransform());

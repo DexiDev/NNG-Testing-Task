@@ -32,7 +32,7 @@ namespace Game.Inventory
         {
             if (!_items.ContainsKey(owner)) return null;
 
-            return _items[owner].FirstOrDefault(item => item.ID == targetItem.ID && (isIgnoreActive || !item.IsActive));
+            return _items[owner].LastOrDefault(item => item.ID == targetItem.ID && (isIgnoreActive || !item.IsActive));
         }
 
         public bool TryGetItem(IInventoryOwner owner, Item targetItem, out Item outItem, bool isIgnoreActive = true)

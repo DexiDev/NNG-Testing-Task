@@ -561,7 +561,6 @@ GameObject:
   - component: {fileID: 894667141}
   - component: {fileID: 894667140}
   - component: {fileID: 894667139}
-  - component: {fileID: 894667143}
   m_Layer: 0
   m_Name: ZoneIn
   m_TagString: Untagged
@@ -580,7 +579,8 @@ Transform:
   m_LocalPosition: {x: 3.48, y: 0.01, z: -3.24}
   m_LocalScale: {x: 0.35, y: 1, z: 0.35}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1994291330}
   m_Father: {fileID: 1811140052}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -601,7 +601,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 1811140054}
-    - {fileID: 894667143}
+    - {fileID: 1994291329}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -613,7 +613,7 @@ MonoBehaviour:
     - Name: _itemsContainer
       Entry: 10
       Data: 1
-  _timerDuration: 1
+  _timerDuration: 0.3
 --- !u!64 &894667140
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -678,27 +678,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894667137}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &894667143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894667137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7988aa0d68b42fb9b5f8f2a7f639468, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
 --- !u!1 &920612659
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +691,6 @@ GameObject:
   - component: {fileID: 920612663}
   - component: {fileID: 920612662}
   - component: {fileID: 920612661}
-  - component: {fileID: 920612665}
   m_Layer: 0
   m_Name: ZoneOut
   m_TagString: Untagged
@@ -731,7 +709,8 @@ Transform:
   m_LocalPosition: {x: 3.48, y: 0.01, z: 3.24}
   m_LocalScale: {x: 0.35, y: 1, z: 0.35}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1376494323}
   m_Father: {fileID: 1811140052}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -760,7 +739,7 @@ MonoBehaviour:
     - Name: _generatedBuilding
       Entry: 10
       Data: 0
-  _timerDuration: 1
+  _timerDuration: 0.2
 --- !u!64 &920612662
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -825,27 +804,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920612659}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &920612665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920612659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7988aa0d68b42fb9b5f8f2a7f639468, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +983,7 @@ MonoBehaviour:
     - Name: <ItemsContainer>k__BackingField
       Entry: 10
       Data: 0
-  _timerDuration: 3
+  _timerDuration: 1
   <ItemIn>k__BackingField: {fileID: 0}
   <ItemOut>k__BackingField: {fileID: 1333729211952963694, guid: 3d545759b1a2a407aab917d00bde6914, type: 3}
 --- !u!1 &1015882395
@@ -1152,7 +1110,7 @@ MonoBehaviour:
     - Name: _generatedBuilding
       Entry: 10
       Data: 0
-  _timerDuration: 1
+  _timerDuration: 0.3
 --- !u!1 &1017537157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,6 +1487,61 @@ MonoBehaviour:
   _useSceneContext: 0
   _context: {fileID: 0}
   _bindType: 0
+--- !u!1 &1376494322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376494323}
+  - component: {fileID: 1376494324}
+  m_Layer: 0
+  m_Name: ItemsContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1376494323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376494322}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -3.09, y: 0, z: -3.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 920612660}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1376494324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376494322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185440ae0a984573ba3b3e929e9f91db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _size: {x: 3, y: 3}
+  _offset: {x: 1.1, y: 1.1, z: 1.1}
 --- !u!1 &1729598428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1732,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 894667143}
+    - {fileID: 1994291329}
     - {fileID: 626996867}
     - {fileID: 639146201}
     SerializedBytesString: 
@@ -1766,7 +1779,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 492160830}
-    - {fileID: 920612665}
+    - {fileID: 1376494324}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1791,6 +1804,61 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!1 &1994291328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994291330}
+  - component: {fileID: 1994291329}
+  m_Layer: 0
+  m_Name: ItemsContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1994291329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994291328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185440ae0a984573ba3b3e929e9f91db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _size: {x: 3, y: 3}
+  _offset: {x: 1.1, y: 1.1, z: 1.1}
+--- !u!4 &1994291330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994291328}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -3.09, y: 0, z: -3.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 894667138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &2122521332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,6 +1929,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 302421159357245676, guid: 42e0492e291934ee5963a4f4bca8a76b, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 302421159357245676, guid: 42e0492e291934ee5963a4f4bca8a76b, type: 3}
     - target: {fileID: 5810606659886141371, guid: 42e0492e291934ee5963a4f4bca8a76b, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -1917,6 +1989,22 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 5810606661321205263, guid: 42e0492e291934ee5963a4f4bca8a76b, type: 3}
+    - target: {fileID: 5810606661321205263, guid: 42e0492e291934ee5963a4f4bca8a76b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810606661321205263, guid: 42e0492e291934ee5963a4f4bca8a76b, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"<ItemsContainer>k__BackingField","value":$eref:0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810606661321205263, guid: 42e0492e291934ee5963a4f4bca8a76b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810606661321205263, guid: 42e0492e291934ee5963a4f4bca8a76b, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5810606661321205264, guid: 42e0492e291934ee5963a4f4bca8a76b, type: 3}
       propertyPath: serializationData.Prefab
       value: 
