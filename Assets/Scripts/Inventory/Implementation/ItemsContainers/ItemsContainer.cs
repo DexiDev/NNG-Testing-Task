@@ -7,6 +7,17 @@ namespace DefaultNamespace
 {
     public class ItemsContainer : SerializedMonoBehaviour, IItemsContainer
     {
+        
+        public void AddItem(Item item)
+        {
+            // _items.Add(item);
+        }
+
+        public void RemoveItem(Item item)
+        {
+            // _items.Remove(item);
+        }
+        
         public Transform GetTransform()
         {
             return transform;

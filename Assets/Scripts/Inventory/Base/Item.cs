@@ -15,6 +15,7 @@ namespace Game.Inventory
         private InventoryManager _inventoryManager;
         
         private IInventoryOwner _currentOwner;
+        private IItemsContainer _itemsContainer;
         private CancellationTokenSource _cancellationTokenSource;
 
         private bool _isActive;
@@ -52,8 +53,13 @@ namespace Game.Inventory
 
             try
             {
-                _isActive = true;
+                _itemsContainer?.RemoveItem(this);
                 
+                _itemsContainer = itemsContainer;
+                
+                _itemsContainer.AddItem(this);
+                
+                _isActive = true;
                 
                 while (transform.position != itemsContainer.GetPosition() &&
                        !_cancellationTokenSource.IsCancellationRequested)

@@ -53,7 +53,7 @@ namespace Game.InteractableObjects.Implementation
         {
             var item = _diContainer.InstantiatePrefabForComponent<Item>(ItemOut, targetTransform.position, targetTransform.rotation, null);
             item.SetOwner(this);
-            item.Move(ItemsContainer);
+            ItemsContainer.MoveItem(item);
         }
         
     }
