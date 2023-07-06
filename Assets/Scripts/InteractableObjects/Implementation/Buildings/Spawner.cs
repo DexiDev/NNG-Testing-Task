@@ -49,7 +49,7 @@ namespace Game.InteractableObjects.Implementation.Buildings
             }
         }
 
-        public async void CreateItem(Transform targetTransform)
+        public void CreateItem(Transform targetTransform)
         {
             var item = _diContainer.InstantiatePrefabForComponent<Item>(ItemOut, targetTransform.position, targetTransform.rotation, null);
             item.SetOwner(this);
