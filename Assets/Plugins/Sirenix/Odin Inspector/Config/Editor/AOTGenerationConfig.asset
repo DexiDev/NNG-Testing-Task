@@ -16,5 +16,27 @@ MonoBehaviour:
   deleteDllAfterBuilds: 1
   AutomateForAllAOTPlatforms: 1
   automateForPlatforms: 0900000014000000
-  lastScan: 638242548340276850
-  supportSerializedTypes: []
+  lastScan: 638242579128404570
+  supportSerializedTypes:
+  - TypeName: Game.Characters.ICharacter, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Game.InteractableObjects.IGeneratedBuilding, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Game.Inventory.IItemsContainer, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Game.InteractableObjects.IStorageBuilding, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Game.Inventory.Item, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Game.Inventory.IItemsContainer,
+      Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Object, mscorlib
+    IsCustom: 0
+    Emit: 1
