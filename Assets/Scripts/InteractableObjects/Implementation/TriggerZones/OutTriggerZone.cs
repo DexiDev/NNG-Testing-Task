@@ -1,9 +1,9 @@
 using Game.Characters.Implementation;
 using Game.Inventory;
 
-namespace Game.InteractableObjects.TriggerZones
+namespace Game.InteractableObjects.Implementation.TriggerZones
 {
-    public class OutTriggerZone : TriggerZone
+    public class OutTriggerZone : TriggerZoneBuilding<IGeneratedBuilding>
     {
         protected override void Execute(PlayerController playerController)
         {

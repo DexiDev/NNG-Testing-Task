@@ -2,9 +2,9 @@ using Game.Characters.Implementation;
 using Game.Inventory;
 using UnityEngine;
 
-namespace Game.InteractableObjects.TriggerZones
+namespace Game.InteractableObjects.Implementation.TriggerZones
 {
-    public class InTriggerZone : TriggerZone
+    public class InTriggerZone : TriggerZoneBuilding<IStorageBuilding>
     {
         [SerializeField] private IItemsContainer _itemsContainer;
         

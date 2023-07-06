@@ -5,7 +5,7 @@ using Game.Inventory;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace Game.Inventory.Implementation.ItemsContainers
 {
     public class StackContainer : SerializedMonoBehaviour, IItemsContainer
     {

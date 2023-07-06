@@ -4,10 +4,8 @@ using UnityEngine;
 
 namespace Game.InteractableObjects
 {
-    public interface IGeneratedBuilding : IInventoryOwner
+    public interface IGeneratedBuilding : IBuilding
     {
-        Item ItemIn { get; }
-        
         Item ItemOut { get; }
         
         void GenerateItem();

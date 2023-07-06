@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 586658024082713620}
   - component: {fileID: 1333729211952963694}
   m_Layer: 0
-  m_Name: Sphere 1
+  m_Name: Metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f51bd212db1548db86b599bd17718d8, type: 2}
+  - {fileID: 2100000, guid: 844b96e760dc1491b8dc88acb088a7c4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,4 +97,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 7
-  _id: Blue
+  _id: Red

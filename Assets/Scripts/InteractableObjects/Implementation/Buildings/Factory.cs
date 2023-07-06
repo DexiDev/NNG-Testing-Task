@@ -1,15 +1,14 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using DefaultNamespace;
 using Game.Inventory;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Zenject;
 
-namespace Game.InteractableObjects.Buildings
+namespace Game.InteractableObjects.Implementation.Buildings
 {
-    public class Factory : SerializedMonoBehaviour, IGeneratedBuilding
+    public class Factory : SerializedMonoBehaviour, IConversionBuilding
     {
         [SerializeField] private float _timerDuration;
         
@@ -70,7 +69,7 @@ namespace Game.InteractableObjects.Buildings
         {
             var item = _diContainer.InstantiatePrefabForComponent<Item>(ItemOut, targetTransform.position, targetTransform.rotation, transform);
             
-            _inventoryManager.Add(this, item);
+            item.SetOwner(this);
             
             _itemsContainerOut.MoveItem(item);
         }

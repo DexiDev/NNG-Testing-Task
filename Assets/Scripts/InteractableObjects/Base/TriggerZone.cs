@@ -11,25 +11,11 @@ namespace Game.InteractableObjects
 {
     public abstract class TriggerZone : SerializedMonoBehaviour
     {
-        [SerializeField] private float _timerDuration;
-        [SerializeField] protected IGeneratedBuilding _generatedBuilding;
-        
-
-        private CancellationTokenSource _cancellationTokenSource;
-
-        protected InventoryManager _inventoryManager;
-
-        [Inject]
-        private void Construct(InventoryManager inventoryManager)
-        {
-            _inventoryManager = inventoryManager;
-        }
-
         private void OnTriggerEnter(Collider collider)
         {
             if (collider.gameObject.TryGetComponent(out PlayerController playerController))
             {
-                WhileExecute(playerController);
+                OnPlayerEnter(playerController);
             }
         }
 
@@ -37,28 +23,12 @@ namespace Game.InteractableObjects
         {
             if (collider.gameObject.TryGetComponent(out PlayerController playerController))
             {
-                _cancellationTokenSource?.Cancel();
+                OnPlayerExit(playerController);
             }
         }
 
-        private async void WhileExecute(PlayerController playerController)
-        {
-            _cancellationTokenSource?.Cancel();
-            _cancellationTokenSource = new();
-
-            try
-            {
-                while (!_cancellationTokenSource.IsCancellationRequested)
-                {
-                    Execute(playerController);
-                    await UniTask.Delay(TimeSpan.FromSeconds(_timerDuration), false, PlayerLoopTiming.Update,
-                        _cancellationTokenSource.Token);
-                }
-
-            }
-            catch (OperationCanceledException) { }
-        }
-
-        protected abstract void Execute(PlayerController playerController);
+        protected abstract void OnPlayerEnter(PlayerController playerController);
+        
+        protected abstract void OnPlayerExit(PlayerController playerController);
     }
 }

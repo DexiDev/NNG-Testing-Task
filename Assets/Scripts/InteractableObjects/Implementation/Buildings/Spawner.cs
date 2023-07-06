@@ -7,7 +7,7 @@ using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using Zenject;
 
-namespace Game.InteractableObjects.Implementation
+namespace Game.InteractableObjects.Implementation.Buildings
 {
     public class Spawner : SerializedMonoBehaviour, IGeneratedBuilding
     {

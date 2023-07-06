@@ -1,6 +1,6 @@
 using Zenject;
 
-namespace Game.Inventory
+namespace Game.Inventory.Installers
 {
     public class InventoryManagerInstaller : MonoInstaller<InventoryManagerInstaller>
     {

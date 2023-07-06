@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace Game.Inventory.Implementation.ItemsContainers
 {
     public class ListItemsContainer : SerializedMonoBehaviour, IItemsContainer
     {
