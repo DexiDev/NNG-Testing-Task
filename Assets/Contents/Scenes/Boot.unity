@@ -156,6 +156,9 @@ MonoBehaviour:
   - _sceneAsset: {fileID: 102900000, guid: 5fa5a3980d6f54913a04f891c041bb21, type: 3}
     _loadSceneMode: 1
     _isActive: 1
+  - _sceneAsset: {fileID: 102900000, guid: 47a5be8730b5c42b3a3396349e68a773, type: 3}
+    _loadSceneMode: 1
+    _isActive: 0
   - _sceneAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
     _loadSceneMode: 1
     _isActive: 0
