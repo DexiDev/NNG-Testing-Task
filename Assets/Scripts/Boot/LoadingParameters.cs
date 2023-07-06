@@ -2,19 +2,20 @@ using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 
 namespace Boot
 {
     [Serializable]
     public class LoadingParameters
     {
-        [SerializeField] private SceneAsset _sceneAsset;
+        [SerializeField] private Object _sceneAsset;
         
         [SerializeField] private LoadSceneMode _loadSceneMode = LoadSceneMode.Additive;
 
         [SerializeField] private bool _isActive;
         
-        public SceneAsset SceneAsset => _sceneAsset;
+        public Object SceneAsset => _sceneAsset;
 
         public LoadSceneMode LoadSceneMode => _loadSceneMode;
 
